@@ -6,3 +6,5 @@ This code can be integrated into an embedded device, such as an ESP32 microcontr
 - Communication with MQTT Server: The MQTT server could be set up on a local network with a stable power source. It would receive temperature readings from the ESP32 and could be accessed by healthcare professionals through applications or control panels.
 - Alert Management: The system could be configured to send alerts if the temperature exceeds safe limits, ensuring that healthcare professionals are notified immediately in case of emergency.
 This application would be useful in situations where electricity may be intermittent or difficult to access, ensuring continuous and accurate temperature monitoring in critical medical environments such as ICUs.
+Theoretical notes
+https://www.notion.so/IoT-Energizada-conectando-o-Mundo-El-trico-62e6d26d6ecf45e0b075cf09b34c814d?pvs=4
