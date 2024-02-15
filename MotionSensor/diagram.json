@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Barbara Fernandes Madera",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9.6, "left": 72.04, "attrs": {} },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -34.4,
+      "left": -151.38,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 169.2,
+      "left": -111.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 186.35,
+      "left": -28.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pir1:VCC", "esp:CLK", "red", [ "v211.2", "h345.6", "v-86.4" ] ],
+    [ "pir1:GND", "esp:D0", "black", [ "v28.8", "h105.34", "v-115.2", "h201.6", "v220.8" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "r1:2", "esp:12", "green", [ "v-38.4", "h46.8" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v28.8", "h144.4", "v-67.2" ] ],
+    [ "pir1:OUT", "esp:35", "green", [ "v67.2", "h153.46", "v-38.4" ] ]
+  ],
+  "dependencies": {}
+}
